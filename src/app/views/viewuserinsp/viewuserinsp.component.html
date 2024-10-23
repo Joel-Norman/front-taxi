@@ -1,0 +1,23 @@
+<div class="mb-3 mt-3">
+    <button class="btn btn-primary" (click)="fileInput.click()">Subir inspeccion</button>
+    <input #fileInput type="file" (change)="onFileSelected($event)" style="display: none;">
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Dia presentado</th>
+        <th scope="col">Dia controlado</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of list">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.initDate | date}}</td>
+        <td>{{item.endDate | date}}</td>
+        <td>{{item.status}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

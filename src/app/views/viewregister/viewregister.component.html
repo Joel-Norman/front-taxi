@@ -1,0 +1,43 @@
+<div class="container" style="display: flex;justify-content: center;">
+    <div class="card" style="padding: 2rem;width: 50%;margin-top: 2rem;">
+        <form [formGroup]="form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre:</label>
+              <input id="name" formControlName="name" type="text" class="form-control" placeholder="Nombre" />
+            </div>
+          
+            <div class="mb-3">
+              <label for="surname" class="form-label">Apellido:</label>
+              <input id="surname" formControlName="surname" type="text" class="form-control" placeholder="Apellido" />
+            </div>
+          
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input id="password" formControlName="password" type="password" class="form-control" placeholder="Contraseña" />
+            </div>
+          
+            <div class="mb-3">
+              <label for="dni" class="form-label">DNI:</label>
+              <input id="dni" formControlName="dni" type="text" class="form-control" placeholder="DNI" />
+            </div>
+          
+            <div class="mb-3">
+              <label for="patente" class="form-label">Patente:</label>
+              <input id="patente" formControlName="patente" type="text" class="form-control" placeholder="Patente del vehículo" />
+            </div>
+          
+            <div class="mb-3">
+              <label for="marca" class="form-label">Marca:</label>
+              <input id="marca" formControlName="marca" type="text" class="form-control" placeholder="Marca del vehículo" />
+            </div>
+          
+            <div class="mb-3">
+              <label for="modelo" class="form-label">Modelo:</label>
+              <input id="modelo" formControlName="modelo" type="text" class="form-control" placeholder="Modelo del vehículo" />
+            </div>
+          
+            <button class="btn btn-primary" (click)="register()">Registrar</button>
+          </form>
+    </div>
+    
+</div>

@@ -1,0 +1,21 @@
+<div class="container" style="display: flex;justify-content: center;">
+    <div class="card" style="padding: 2rem;width: 50%;margin-top: 2rem;">
+        <form [formGroup]="form">
+            <div class="mb-3">
+                <label for="dni" class="form-label">DNI:</label>
+                <input id="dni" formControlName="dni" type="text" class="form-control" placeholder="DNI" />
+              </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input id="password" formControlName="password" type="password" class="form-control" placeholder="Contraseña" />
+            </div>
+          
+            
+          
+            
+          
+            <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+          </form>
+    </div>
+    
+</div>

@@ -1,0 +1,42 @@
+
+<table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre Apellido</th>
+        <th scope="col">Dni</th>
+        <th scope="col">Vehiculo</th>
+        <th scope="col">Vehiculo modelo</th>
+        <th scope="col">Archivo</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of list">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}} {{item.surname}}</td>
+        <td>{{item.dni}}</td>
+        <td>{{item.patente}}</td>
+        <td>{{item.marca}} {{item.modelo}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary" (click)="open(content,item)"><i class="bi bi-eye"></i></button>
+            <button type="button" class="btn btn-outline-primary" (click)="open2(content,item)"><i class="bi bi-eye"></i></button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-outline-primary" (click)="accion('ACEPTED',item)"><i class="bi bi-check2"></i></button>
+          <button type="button" class="btn btn-outline-primary" (click)="accion('DENIED',item)"><i class="bi bi-x"></i></button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Archivo</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<iframe [src]="pathArchivo" width="100%" height="600px"></iframe>
+	</div>
+	
+</ng-template>

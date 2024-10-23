@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col">
+        <div class="card m-2 p-3">
+            <div class="row">
+                <div class="col-8">
+                    <h3>{{user.name}}, {{user.surname}} Bienvenido!!</h3>
+                    <p>{{user.dni}}</p>
+                    <h4>Vehiculo</h4>
+                    <p>Patente: {{user.vehiculo.patente}}</p>
+                    <p>Modelo: {{user.vehiculo.marca}} - {{user.vehiculo.modelo}}</p>
+                </div>
+                <div class="col-4">
+                    <h4 *ngIf="user.status=='DENIED'">No activo</h4>
+                    <h4 *ngIf="user.status=='ACEPTED'">Aceptado</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="card m-3">
+            <button class="btn btn-primary" (click)="fileInput.click()">Subir carnet</button>
+            <input #fileInput type="file" (change)="onFileSelected($event)" style="display: none;">
+        </div>
+    </div>
+    <div class="col">
+        <div class="card m-3">
+            <button class="btn btn-primary" (click)="fileInput2.click()">subir cedula</button>
+            <input #fileInput2 type="file" (change)="onFileSelected2($event)" style="display: none;">
+        </div>
+    </div>
+</div>
